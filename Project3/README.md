@@ -28,9 +28,17 @@ In this project, we will provide a leaderboard and give **10** bonus points to t
   | Top | Date | Name | Score | Model |
   | :---: | :---:| :---: | :---: | :---: |
   | ✅ 1  | 11/03/2025 | Alex Ballentine | 399.53 | Noisy Dueling DQN |
-  | ✅ 2   | 11/03/2025 | Davud Azizov | 71.65 | Vanilla DQN |
-  | ✅ 3   | 10/27/2025 | Suryansh Goyal | 68.84 | Vanilla DQN |
-  | 4  | 10/27/2025 | Lucas Lamenha | 59.18 | Dueling DQN |
+  | ✅ 2   | 11/18/2025 | Tanveer Kaur | 359.01 | Double DQN |
+  | ✅ 3   | 11/18/2025 | Paola Frunzio | 358.14 | Double DQN |
+  | 4  | 11/18/2025 | Kang Zhang | 327.75 | Vanilla DQN |
+  | 5  | 11/18/2025 | Gavin Hamburg | 265.86 | Double DQN |
+  | 6  | 11/18/2025 | Suryansh Goyal | 255.2 | Double DQN |
+  | 7   | 11/18/2025 | Bibhus Luitel | 227.26 | Vanilla DQN |
+  | 8   | 11/18/2025 | Manideep Duggi | 186.38 | Vanilla DQN |
+  | 9  | 11/18/2025 | Kevin O'Brien | 107.21 | Dueling Double DQN |
+  | 10   | 11/03/2025 | Davud Azizov | 103.86 | Vanilla DQN |
+
+
   
 * How to elvaluate
   * You should submit your lastest trained model and python code. TA will run your code to make sure the result is consistent with your screenshot. 
