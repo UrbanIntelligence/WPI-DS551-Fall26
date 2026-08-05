@@ -26,16 +26,10 @@ In this project, we will provide a leaderboard and give **10** bonus points to t
   
   | Top | Date | Name | Score | Model |
   | :---: | :---:| :---: | :---: | :---: |
-  | ✅ 1  | 11/03/2025 | Alex Ballentine | 399.53 | Noisy Dueling DQN |
-  | ✅ 2   | 11/18/2025 | Tanveer Kaur | 359.01 | Double DQN |
-  | ✅ 3   | 11/18/2025 | Paola Frunzio | 358.14 | Double DQN |
-  | 4  | 11/18/2025 | Kang Zhang | 327.75 | Vanilla DQN |
-  | 5  | 11/18/2025 | Gavin Hamburg | 265.86 | Double DQN |
-  | 6  | 11/18/2025 | Suryansh Goyal | 255.2 | Double DQN |
-  | 7   | 11/18/2025 | Bibhus Luitel | 227.26 | Vanilla DQN |
-  | 8   | 11/18/2025 | Manideep Duggi | 186.38 | Vanilla DQN |
-  | 9  | 11/18/2025 | Kevin O'Brien | 107.21 | Dueling Double DQN |
-  | 10   | 11/03/2025 | Davud Azizov | 103.86 | Vanilla DQN |
+  | ✅ 1  |  |  |  |  |
+  | ✅ 2   |  |  |  |  |
+  | ✅ 3   |  |  |  |  |
+ 
 
 
   
@@ -214,3 +208,17 @@ Please compress all the below files into a zipped file and submit the zip file (
   | 8  | 11/12/2024 | Jake Watson | 300.22 | Vanilla DQN |
   | 9  | 11/08/2024 | Srikanth Natarajan | 281.62 | ... |
   | 10  | 11/12/2024 | Piyush Thapar | 276.57 | Standard DQN |
+
+ ## Leaderboard for Fall 2025** 
+  | Top | Date | Name | Score | Model |
+  | :---: | :---:| :---: | :---: | :---: |
+  | ✅ 1  | 11/03/2025 | Alex Ballentine | 399.53 | Noisy Dueling DQN |
+  | ✅ 2   | 11/18/2025 | Tanveer Kaur | 359.01 | Double DQN |
+  | ✅ 3   | 11/18/2025 | Paola Frunzio | 358.14 | Double DQN |
+  | 4  | 11/18/2025 | Kang Zhang | 327.75 | Vanilla DQN |
+  | 5  | 11/18/2025 | Gavin Hamburg | 265.86 | Double DQN |
+  | 6  | 11/18/2025 | Suryansh Goyal | 255.2 | Double DQN |
+  | 7   | 11/18/2025 | Bibhus Luitel | 227.26 | Vanilla DQN |
+  | 8   | 11/18/2025 | Manideep Duggi | 186.38 | Vanilla DQN |
+  | 9  | 11/18/2025 | Kevin O'Brien | 107.21 | Dueling Double DQN |
+  | 10   | 11/03/2025 | Davud Azizov | 103.86 | Vanilla DQN |
