@@ -10,8 +10,8 @@ You can optionally update argument.py to add your own arguments (if needed).
 * Week 7, Tuesday Oct 7, 2025 (23:59)
 
 #### Due Date
-* Extended to Week 12, Tuesday, Nov 11, 2025 (23:59)
-* Original deadline: Week 10, Tuesday Oct 28, 2025 (23:59)
+* Extended to Week 12, Tuesday, Nov 10, 2026 (23:59)
+* Original deadline: Week 10, Tuesday Oct 27, 2026 (23:59)
 
 #### Total Points
 * 100 (One Hundred)
