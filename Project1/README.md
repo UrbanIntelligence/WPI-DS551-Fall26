@@ -1,11 +1,11 @@
-# DS551/CS551 2025 Fall Individual Project 1
+# DS551/CS551 2026 Fall Individual Project 1
 # Dynamic Programming of Markov Decision Process
 
 #### Starting Date
-* Week 2 Tuesday September 2, 2025(23:59)
+* Week 2 Tuesday September 1, 2026(23:59)
 
 #### Due Date
-* Week 4 Tuesday September 16, 2025(23:59)
+* Week 4 Tuesday September 15, 2026(23:59)
 
 #### Total Points
 * 100 (One Hundred)
