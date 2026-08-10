@@ -1,4 +1,4 @@
-# DS551/CS551 2026 Fall Individual Project 1
+# DS551/CS551 2026 Fall Individual Project 1 
 # Dynamic Programming of Markov Decision Process
 
 #### Starting Date
