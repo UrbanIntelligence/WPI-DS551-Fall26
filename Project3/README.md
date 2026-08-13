@@ -83,15 +83,29 @@ Please compress all the below files into a zipped file and submit the zip file (
 
 ### Required files for the autograder
 
+**⚠️ Submitting only your `.pth` file is the #1 mistake and scores an
+immediate 0/70.** Your submission (directly, or zipped -- both work) must
+include **all** of:
+- [ ] `agent_dqn.py`
+- [ ] `dqn_model.py`
+- [ ] `argument.py` -- only if you added custom arguments
+- [ ] your trained model `.pth` file(s)
+
 The autograder only reads a subset of your submission -- it does not read
 `report.pdf` (that's graded separately by the TA, so you won't see report
 feedback in Gradescope). It looks for, by filename, anywhere in your
 submitted zip:
 * `agent_dqn.py` and `dqn_model.py` -- **required**; if either is missing,
-  both the Trained Model and Python Code scores are 0
+  Gradescope reports "MISSING required file" and both the Trained Model
+  and Python Code scores are 0 -- this is exactly what happens if you
+  submit just the checkpoint by itself
 * `argument.py` -- optional, only used if you added custom arguments
 * your trained model `.pth` file(s) -- **required**; missing this also
-  scores 0 on the automated portion
+  scores 0 on the automated portion. The filename doesn't need to be
+  anything specific, but it **must match whatever filename your own
+  `agent_dqn.py` is coded to load** (e.g. if your `__init__` does
+  `torch.load('save_model/best_checkpoint.pth')`, submit a file named
+  `best_checkpoint.pth`, not something else)
 
 ## Grading
 Submitting to Canvas/Gradescope automatically runs `python main.py --test_dqn`
