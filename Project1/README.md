@@ -26,7 +26,9 @@
 
 ## Deliverables
 
-Please compress your mdp_dp.py file into a zipped file (firstName_lastName_hw1.zip) and submit it to Canvas.
+Submit your completed `mdp_dp.py` to Canvas. You can upload it directly --
+**no need to zip it** -- or zip it as `firstName_lastName_hw1.zip` if you
+prefer; the autograder accepts either.
 
 ## Grading
 * policy evaluation (20 points)

@@ -32,7 +32,9 @@ Expected Output for project 2-2 (TD)
 
 ## Deliverables
 
-Please compress your mc.py and td.py files into a zip file (firstName_lastName_hw2.zip) and submit it to Canvas.
+Submit your completed `mc.py` and `td.py` to Canvas. You can upload them
+directly -- **no need to zip them** -- or zip them together as
+`firstName_lastName_hw2.zip` if you prefer; the autograder accepts either.
 
 ## Grading
 
