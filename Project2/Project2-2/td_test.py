@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # Modified By Yanhua Li on 08/19/2023 for gymnasium==0.29.0
-# Modified By Yanhua Li and Fanxi Kong on 08/2025 for gymnasium==1.20.0
+# Updated for DS551/CS551 Fall 2026 with gymnasium==1.2.2
 import gymnasium as gym
 import numpy as np
+import random
 import sys
 from collections import defaultdict
 from collections import Counter
@@ -12,11 +13,18 @@ from td import *
 """
     This file includes unit test for td.py
     You could test the correctness of your code by
-    typing 'nosetests -v td_test.py' in the terminal
+    typing 'python -m nose -v td_test.py' in the terminal
 """
 
 env = gym.make('CliffWalking-v1')
 #---------------------------------------------------------------
+
+
+def seed_all(seed):
+    random.seed(seed)
+    np.random.seed(seed)
+    env.reset(seed=seed)
+    env.action_space.seed(seed)
 
 
 def test_python_version():
@@ -34,6 +42,7 @@ def test_epsilon_greedy():
     Q[5][2] = -1
     Q[5][3] = -1
     state = 5
+    seed_all(202604)
 
     actions = []
     for _ in range(10000):
@@ -47,6 +56,7 @@ def test_epsilon_greedy():
 
 def test_sarsa():
     '''SARSA (25 points)'''
+    seed_all(202605)
     test_policy = np.array([[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
                             [0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 0]])
     # note: we do not have cliff state in Q_s if using Sarsa
@@ -62,6 +72,7 @@ def test_sarsa():
 
 def test_q_learning():
     '''Q_learning (25 points)'''
+    seed_all(202606)
     Q_q = q_learning(env, n_episodes=10000, gamma=1.0, alpha=0.01, epsilon=0.1)
     policy_q = np.array([np.argmax(Q_q[key]) if key in Q_q else -1 for key
                          in np.arange(48)]).reshape((4, 12))

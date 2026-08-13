@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # Modified By Yanhua Li on 08/19/2023 for gymnasium==0.29.0
-# Modified By Yanhua Li and Fanxi Kong on 08/2025 for gymnasium==1.20.0
+# Updated for DS551/CS551 Fall 2026 with gymnasium==1.2.2
 import gymnasium as gym
 import numpy as np
+import random
 import sys
 from collections import defaultdict
 
@@ -12,11 +13,18 @@ from mc import *
 """
     This file includes unit test for mc.py
     You could test the correctness of your code by
-    typing 'nosetests -v mc_test.py' in the terminal
+    typing 'python -m nose -v mc_test.py' in the terminal
 """
 # env = gym.make('Blackjack-v1',new_step_api=True)
 env = gym.make('Blackjack-v1', natural=False, sab=False)
 #---------------------------------------------------------------
+
+
+def seed_all(seed):
+    random.seed(seed)
+    np.random.seed(seed)
+    env.reset(seed=seed)
+    env.action_space.seed(seed)
 
 
 def test_python_version():
@@ -41,6 +49,7 @@ def test_initial_policy():
 
 def test_mc_prediction():
     '''mc_prediction (20 points)'''
+    seed_all(202601)
     V_500k = mc_prediction(initial_policy, env, n_episodes=500000, gamma=1.0)
     boundaries1 = [(18, 4, False), (18, 6, False), (18, 8, False)]
     boundaries2 = [(18, 4, True), (18, 6, True), (18, 8, True)]
@@ -71,6 +80,7 @@ def test_epsilon_greedy():
     '''
     Q = defaultdict(lambda: np.zeros(4))
     state = (14, 7, True)
+    seed_all(202602)
 
     actions = []
     for _ in range(10000):
@@ -90,6 +100,7 @@ def test_mc_control_epsilon_greedy():
 
     count = 0
     for _ in range(2):
+        seed_all(202603 + _)
         Q_500k = mc_control_epsilon_greedy(env, n_episodes=1000000, gamma=1.0, epsilon=0.1)
         policy = dict((k, np.argmax(v)) for k, v in Q_500k.items())
         # print([policy[key] for key in boundaries_key])

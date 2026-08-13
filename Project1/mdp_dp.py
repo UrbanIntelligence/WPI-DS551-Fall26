@@ -2,6 +2,7 @@
 ### Reference: https://web.stanford.edu/class/cs234/assignment1/index.html 
 # Modified By Yanhua Li on 09/09/2022 for gym==0.25.2
 # Modified By Yanhua Li on 08/19/2023 for gymnasium==0.29.0
+# Updated for DS551/CS551 Fall 2026 with gymnasium==1.2.2
 import numpy as np
 
 np.set_printoptions(precision=3)
@@ -11,7 +12,7 @@ For policy_evaluation, policy_improvement, policy_iteration and value_iteration,
 the parameters P, nS, nA, gamma are defined as follows:
 
 	P: nested dictionary
-		From gym.core.Environment
+		From gymnasium.core.Environment
 		For each pair of states in [1, nS] and actions in [1, nA], P[state][action] is a
 		tuple of the form (probability, nextstate, reward, terminal) where
 			- probability: float
@@ -136,14 +137,14 @@ def value_iteration(P, nS, nA, V, gamma=0.9, tol=1e-8):
 
 def render_single(env, policy, render = False, n_episodes=100):
     """
-    Given a game envrionemnt of gym package, play multiple episodes of the game.
-    An episode is over when the returned value for "done" = True.
+    Given a game environment from gymnasium, play multiple episodes of the game.
+    An episode is over when the returned value for "terminated" or "truncated" is True.
     At each step, pick an action and collect the reward and new state from the game.
 
     Parameters:
     ----------
     env: gym.core.Environment
-      Environment to play on. Must have nS, nA, and P as attributes.
+      Environment to play on. Must have observation_space, action_space, and P as attributes.
     policy: np.array of shape [env.nS, env.nA]
       The action to take at a given state
     render: whether or not to render the game(it's slower to render the game)
@@ -165,6 +166,5 @@ def render_single(env, policy, render = False, n_episodes=100):
             ############################
             
     return total_rewards
-
 
 

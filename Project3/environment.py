@@ -19,12 +19,19 @@ class Environment(object):
 
         self.action_space = self.env.action_space
         self.observation_space = self.env.observation_space
-        
+        self._pending_seed = None
+
     def seed(self, seed):
         '''
-        Control the randomness of the environment
+        Control the randomness of the environment.
+
+        Gymnasium >= 0.26 removed Env.seed(); seeding now happens through
+        reset(seed=...). We store the seed here and apply it on the next
+        reset() call (see reset() below), which matches the old behavior of
+        seeding once and then letting the env's RNG continue from there.
         '''
-        self.env.seed(seed)
+        self._pending_seed = seed
+        self.action_space.seed(seed)
 
     def reset(self):
         '''
@@ -32,7 +39,9 @@ class Environment(object):
             observation: np.array
                 stack 4 last frames, shape: (84, 84, 4)
         '''
-        observation, _ = self.env.reset()
+        seed = getattr(self, '_pending_seed', None)
+        self._pending_seed = None
+        observation, _ = self.env.reset(seed=seed)
 
         return np.array(observation)
 

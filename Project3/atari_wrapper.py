@@ -1,4 +1,5 @@
 from collections import deque
+import ale_py  # noqa: F401  (registers ALE/* envs with gymnasium >= 1.0)
 import gymnasium as gym
 from gymnasium import spaces
 import numpy as np
@@ -343,8 +344,9 @@ def wrap_deepmind(env, dim=84, clip_rewards=True, framestack=True, noframeskip=F
         env = FrameStack(env, 4)
     return env
 
-def make_wrap_atari(env_id='ALE/Breakout-v5', clip_rewards=True, render_mode='rgd_array'):
-    env = gym.make("ALE/Breakout-v5", frameskip=1, render_mode=render_mode)
+def make_wrap_atari(env_id='ALE/Breakout-v5', clip_rewards=True, render_mode='rgb_array'):
+    env = gym.make(env_id, frameskip=1, render_mode=render_mode)
+
     return wrap_deepmind(env, dim=84, clip_rewards=clip_rewards, framestack=True, noframeskip=True)
 # scale = False; # no changes is needed.
 # clip_reward = True when training; False when test

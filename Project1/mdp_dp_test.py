@@ -3,7 +3,7 @@
 # Modified By Yanhua Li on 09/05/2022
 # Modified By Yanhua Li on 09/09/2022 for gym==0.25.2
 # Modified By Yanhua Li on 08/19/2023 for gymnasium==0.29.0
-# Modified By Yanhua Li and Fanxi Kong on 08/2025 for gymnasium==1.20.0
+# Updated for DS551/CS551 Fall 2026 with gymnasium==1.2.2
 #
 from mdp_dp import *
 import gymnasium as gym
@@ -13,7 +13,7 @@ import numpy as np
 """
     This file includes unit test for mdp_dp.py
     You could test the correctness of your code by 
-    typing 'nosetests -v mdp_dp_test.py' in the terminal
+    typing 'python -m nose -v mdp_dp_test.py' in the terminal
 """
 
 # Evaluate non-deterministic
@@ -248,12 +248,16 @@ def test_render_single():
    #  print("\n" + "-"*25 + "\nBeginning Policy Iteration\n" + "-"*25)
     random_policy = np.ones([nS, nA]) / nA
     p_pi, V_pi = policy_iteration(env.P, nS, nA, random_policy,tol=1e-8)
+    env.reset(seed=2026)
+    env.action_space.seed(2026)
     r_pi = render_single(env, p_pi, False, 50)
    #  print("total rewards of PI: ",r_pi)
     
    #  print("\n" + "-"*25 + "\nBeginning Value Iteration\n" + "-"*25)
     V = np.zeros(nS)
     p_vi, V_vi = value_iteration(env.P, nS, nA, V,tol=1e-8)
+    env.reset(seed=2027)
+    env.action_space.seed(2027)
     r_vi = render_single(env, p_vi, False, 50)
    #  print("total rewards of VI: ",r_vi)
     

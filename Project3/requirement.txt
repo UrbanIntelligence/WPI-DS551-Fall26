@@ -1,10 +1,12 @@
-#installl pytorch
-#opencv-python-headless
-#gym==0.29.0
-#gymnasium[atari]
-#autorom[accept-rom-license]
-#using the following command to install these packages
-pip install opencv-python-headless gymnasium[atari] autorom[accept-rom-license]
+# Install pytorch first (pick the build matching your CUDA version, e.g.
+# from https://pytorch.org/get-started/locally/), then:
+#
+# Verified for DS551/CS551 Fall 2026 with Python 3.11.
+# NOTE: gymnasium is pinned to 1.2.2, NOT the newest 1.3.0 -- ray[rllib]
+# (installed below, used by atari_wrapper.py) hard-pins gymnasium==1.2.2 and
+# fails to resolve against 1.3.0. Do not bump this without also checking
+# ray[rllib]'s pin.
+pip install opencv-python-headless "gymnasium[atari]==1.2.2" autorom[accept-rom-license]
 #for the Atari wrapper, install the following two items
 pip install -U "ray[rllib]" ipywidgets
 #for video recording in testing

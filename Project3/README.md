@@ -40,15 +40,17 @@ In this project, we will provide a leaderboard and give **10** bonus points to t
   
 ## Setup
 * Recommended programming IDE (integrated development environment): VS code (See [install VS code](https://code.visualstudio.com/)) 
-* Install [Miniconda](https://www.python.org/downloads/)
-* Create virtual environment and install Python 3: conda create -n myenv python=3.11.4. This will help you create a new conda environment named myenv. Gymnasium library supports for Python 3.8, 3.9, 3.10, 3.11 on Linux and macOS.
+* Install [Miniconda](https://docs.conda.io/en/latest/miniconda.html)
+* Create virtual environment and install Python 3.11: `conda create -n myenv python=3.11`. This will help you create a new conda environment named myenv.
 * Activate your virtual environment: `conda activate myenv`
-* install pytorch: See [install pytorch](https://pytorch.org/get-started/locally/), pip install torch torchvision torchaudio
-* For the  Atari wrapper, install the following two items: `pip install -U "ray[rllib]" ipywidgets`
-* Install gymnasium: `pip install opencv-python-headless gymnasium[atari,accept-rom-license]==0.29.0` (See [install gymnasium](https://github.com/Farama-Foundation/Gymnasium))
-* Install AutoRom: `python -m pip install -U "autorom[accept-rom-license]"`,`AutoROM -y`.
+* install pytorch: See [install pytorch](https://pytorch.org/get-started/locally/) and pick the build matching your CUDA version (or CPU-only if you don't have a local GPU -- note training in practice requires a GPU; a CPU-only machine will be far too slow).
+* For the Atari wrapper, install ray[rllib]: `pip install -U "ray[rllib]" ipywidgets`
+* Install gymnasium: `pip install opencv-python-headless "gymnasium[atari]==1.2.2"` (See [install gymnasium](https://github.com/Farama-Foundation/Gymnasium))
+  * **Important:** this is pinned to `1.2.2`, *not* the newest `1.3.0`. `ray[rllib]` (installed above, used by `atari_wrapper.py`) hard-pins `gymnasium==1.2.2` and fails to resolve against `1.3.0` -- this is a verified, real dependency conflict, not a typo. Don't try to "upgrade" this yourself.
+  * `gymnasium[atari]` pulls in `ale-py`, which registers the `ALE/*` and legacy `*NoFrameskip-v4` environment IDs automatically on import -- `atari_wrapper.py` already does `import ale_py` for you.
+* Download the Atari ROMs: `python -m pip install -U "autorom[accept-rom-license]"`, then `AutoROM --accept-license`.
 * For successfully running code, you may also need to install the following item: `pip install --upgrade scipy numpy`.
-* For video recording in testing, install the following three items: `pip install moviepy`, `pip install ffmpeg`.
+* For video recording in testing, install the following: `pip install moviepy`, and make sure `ffmpeg` is available (e.g. `conda install -c conda-forge ffmpeg`).
 * When testing, for nice output on the terminal, you need to install tqdm: `pip install tqdm`
 
 ## How to run :
@@ -62,7 +64,7 @@ testing DQN while recording a video (recording video takes time, so usually you 
 * `$ python main.py --test_dqn --record_video`
 
 ## Goal
-In this project, you will be asked to implement DQN to play [Breakout](https://gymnasium.farama.org/environments/atari/breakout/). This project will be completed in Python 3 using [Pytorch](https://pytorch.org/). The goal of your training is to get averaging reward in 100 episodes over **40 points** in **Breakout** (each episode has 5 lives), with OpenAI's Atari wrapper & clipped reward. For more details, please see the [slides](https://github.com/UrbanIntelligence/WPI-DS551-Fall25/blob/main/Project3/materials/DS551_CS525%20FALL_Project%203%20-%20Deep%20Q-learning.pdf).
+In this project, you will be asked to implement DQN to play [Breakout](https://gymnasium.farama.org/environments/atari/breakout/). This project will be completed in Python 3 using [Pytorch](https://pytorch.org/). The goal of your training is to get averaging reward in 100 episodes over **40 points** in **Breakout** (each episode has 5 lives), with OpenAI's Atari wrapper & clipped reward. For more details, please see the [slides](https://github.com/UrbanIntelligence/WPI-DS551-Fall26/blob/main/Project3/materials/DS551_CS525%20FALL_Project%203%20-%20Deep%20Q-learning.pdf).
 
 <img src="/Project3/materials/project3.png" width="80%" >
 
@@ -103,7 +105,7 @@ Please compress all the below files into a zipped file and submit the zip file (
   * You can get full credits if the scripts can run successfully, otherwise you may loss some points based on your error.
 
 ## Hints
-* [Naive Pytorch Tutorial](https://github.com/lllyyyt123/WPI-DS551-Fall23/blob/main/Project3/Pytorch_tutorial.ipynb)
+* [Naive Pytorch Tutorial](https://github.com/UrbanIntelligence/WPI-DS551-Fall26/blob/main/Project3/Pytorch_tutorial.ipynb)
 * [How to Save Model with Pytorch](https://github.com/yingxue-zhang/DS595CS525-RL-Projects/blob/master/Project3/materials/How%20to%20Save%20Model%20with%20Pytorch.pdf)
 * [Official Pytorch Tutorial](https://pytorch.org/tutorials/)
 * [Official DQN Pytorch Tutorial](https://pytorch.org/tutorials/intermediate/reinforcement_q_learning.html)
@@ -112,7 +114,7 @@ Please compress all the below files into a zipped file and submit the zip file (
 * [DQN Tutorial on Medium](https://medium.com/@jonathan_hui/rl-dqn-deep-q-network-e207751f7ae4)
 
 ## Tips for Using Turing GPUs or Google Cloud
-* [How to use GPUs on WPI Turing](https://github.com/UrbanIntelligence/WPI-DS551-Fall25/blob/main/Project3/materials/Turing_Setup_Instructions_2025.pdf)
+* [How to use GPUs on WPI Turing](https://github.com/UrbanIntelligence/WPI-DS551-Fall26/blob/main/Project3/materials/Turing_Setup_Instructions_2025.pdf)
 * [Google Cloud Platform](https://colab.google/)
 
   

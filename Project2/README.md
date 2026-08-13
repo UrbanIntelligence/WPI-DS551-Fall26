@@ -27,7 +27,8 @@ Expected Output for project 2-2 (TD)
 * <span style="color:blue">**TA will run your code three times. You will get full credits if one of the tests passes.**</span><br/>
 
 ## Setup
-* The same setup/virtual environment as that in project 1. 
+* The same setup/virtual environment as Project 1: Python 3.11, `pip install "gymnasium[atari]==1.2.2" pynose==1.5.5 numpy`.
+* This `gymnasium==1.2.2` pin is shared with Project 3, which requires it specifically because `ray[rllib]` hard-pins that exact version.
 
 ## Deliverables
 

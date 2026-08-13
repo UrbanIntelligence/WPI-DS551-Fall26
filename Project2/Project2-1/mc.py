@@ -5,7 +5,7 @@ Created on Fri Aug 23 16:11:22 2019
 
 @author: huiminren
 # Modified By Yanhua Li on 08/19/2023 for gymnasium==0.29.0
-# Modified By Yanhua Li and Fanxi Kong on 08/2025 for gymnasium==1.20.0
+# Updated for DS551/CS551 Fall 2026 with gymnasium==1.2.2
 """
 import numpy as np
 import random
@@ -17,7 +17,7 @@ from collections import defaultdict
     The main goal of this problem is to get familar with Monte-Carlo algorithm.
 
     You could test the correctness of your code
-    by typing 'nosetests -v mc_test.py' in the terminal.
+    by typing 'python -m nose -v mc_test.py' in the terminal.
 '''
 #-------------------------------------------------------------------------
 
@@ -50,7 +50,7 @@ def mc_prediction(policy, env, n_episodes, gamma=1.0):
     policy: function
         A function that maps an obversation to action probabilities
     env: function
-        OpenAI gym environment
+        Gymnasium environment
     n_episodes: int
         Number of episodes to sample
     gamma: float
@@ -112,7 +112,7 @@ def mc_control_epsilon_greedy(env, n_episodes, gamma=1.0, epsilon=0.1):
     Parameters:
     -----------
     env: function
-        OpenAI gym environment
+        Gymnasium environment
     n_episodes: int
         Number of episodes to sample
     gamma: float

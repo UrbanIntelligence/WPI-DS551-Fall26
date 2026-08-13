@@ -49,24 +49,24 @@ Please compress your mdp_dp.py file into a zipped file (firstName_lastName_hw1.z
 
 ## Setup
 * Recommended programming IDE (integrated development environment): VS code (See [install VS code](https://code.visualstudio.com/)) 
-* Install [Miniconda](https://www.python.org/downloads/)
-* Create virtual environment and install [Python 3](https://www.python.org/downloads/): conda create -n myenv python=3.11.4. This will help you create a new conda environment named myenv. Gymnasium library supports for Python 3.8, 3.9, 3.10, 3.11 on Linux and macOS.
-* Activate your virtual environment: conda activate myenv
-* Install gymnasium: pip install "gymnasium[atari]" (See [install gymnasium](https://github.com/Farama-Foundation/Gymnasium))
-* Install nose: pip install pynose (See [install nose](https://pypi.org/project/pynose/))
-  
+* Install [Miniconda](https://docs.conda.io/en/latest/miniconda.html)
+* Create virtual environment and install Python 3.11: `conda create -n myenv python=3.11`. This will help you create a new conda environment named myenv.
+* Activate your virtual environment: `conda activate myenv`
+* Install gymnasium: `pip install "gymnasium[atari]==1.2.2"` (See [install gymnasium](https://github.com/Farama-Foundation/Gymnasium))
+* Install nose: `pip install pynose==1.5.5` (See [install nose](https://pypi.org/project/pynose/))
+* Install numpy: `pip install numpy`
 
 ```diff
-- Note: Our environment code mdp_dp.py and mdp_dp_test.py were developed/updated for the latest version of OpenAI gymnasium (version 0.29.0). 
+- Note: our environment code mdp_dp.py and mdp_dp_test.py are verified for DS551/CS551 Fall 2026 with gymnasium==1.2.2.
 
-- So when you install your gym, please use command line pip install "gymnasium[atari]". 
+- This is pinned deliberately -- Project 3 (which shares the same course environment) requires gymnasium==1.2.2 because ray[rllib] hard-pins that exact version. Please install with pip install "gymnasium[atari]==1.2.2", not an unpinned/newer version.
 ```
 
 
 ## Guidelines
 * Implement functions in mdp_dp.py
-* Evaluate functions by typing "nosetests -v mdp_dp_test.py" in terminal (you need put mdp_dp.py and mdp_dp_test.py in the same folder)
-* If you got error using "nosetests -v mdp_dp_test.py" due to python version (sometimes, nosetests will use python2.7 by default), try: python3 -m nose -v mdp_dp_test.py
+* Evaluate functions by typing "python -m nose -v mdp_dp_test.py" in terminal (you need put mdp_dp.py and mdp_dp_test.py in the same folder)
+* If you got error using "nosetests -v mdp_dp_test.py" due to python version (sometimes, nosetests will use python2.7 by default), use `python -m nose -v mdp_dp_test.py` instead (as above), or try `python3 -m nose -v mdp_dp_test.py`
 
 ## Tips for Python and OpenAI Gym
 [Python Documentation](https://www.python.org/doc/)

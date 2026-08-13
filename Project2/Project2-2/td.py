@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # Modified By Yanhua Li on 08/19/2023 for gymnasium==0.29.0
-# Modified By Yanhua Li and Fanxi Kong on 08/2025 for gymnasium==1.20.0
+# Updated for DS551/CS551 Fall 2026 with gymnasium==1.2.2
 import numpy as np
 import random
 from collections import defaultdict
@@ -11,7 +11,7 @@ from collections import defaultdict
     In this problem, you will implememnt an AI player for cliffwalking.
     The main goal of this problem is to get familar with temporal diference algorithm.
     You could test the correctness of your code 
-    by typing 'nosetests -v td_test.py' in the terminal.
+    by typing 'python -m nose -v td_test.py' in the terminal.
 '''
 #-------------------------------------------------------------------------
 
@@ -50,7 +50,7 @@ def sarsa(env, n_episodes, gamma=1.0, alpha=0.5, epsilon=0.1):
     Parameters:
     -----------
     env: function
-        OpenAI gym environment
+        Gymnasium environment
     n_episodes: int
         Number of episodes to sample
     gamma: float
@@ -86,7 +86,7 @@ def q_learning(env, n_episodes, gamma=1.0, alpha=0.5, epsilon=0.1):
     Parameters:
     -----------
     env: function
-        OpenAI gym environment
+        Gymnasium environment
     n_episodes: int
         Number of episodes to sample
     gamma: float
