@@ -18,23 +18,12 @@ You can optionally update argument.py to add your own arguments (if needed).
 ## Leaderboard and Bonus Points
 In this project, we will provide a leaderboard and give **10** bonus points to the **top 3** highest reward students! 
 * Where to see the leaderboard 
-  * We will create a discussion on Canvas and each of you can post your highest reward with a sreenshot. TA will summarize your posts and list the top 3 highest rewards and post it below. <br>
+  * The leaderboard is **live in Gradescope**, ranked by your average reward, and updates automatically every time you submit -- no need to post a screenshot anywhere. TA will read the top 3 off the Gradescope leaderboard after the deadline and apply the +10 bonus. <br>
   * The leaderboards of previous years are also posted at the end of this page, you can check it out.
-  
-  **Leaderboard for Breakout-DQN** 
-  **Update Date: **
-  
-  | Top | Date | Name | Score | Model |
-  | :---: | :---:| :---: | :---: | :---: |
-  | ✅ 1  |  |  |  |  |
-  | ✅ 2   |  |  |  |  |
-  | ✅ 3   |  |  |  |  |
- 
-
 
   
-* How to elvaluate
-  * You should submit your lastest trained model and python code. TA will run your code to make sure the result is consistent with your screenshot. 
+* How to evaluate
+  * You should submit your latest trained model and python code. When you submit to Canvas/Gradescope, the autograder automatically runs your code (`python main.py --test_dqn`) and computes your Trained Model and Python Code scores right away -- make sure the result is consistent with the screenshot in your report.
 * How to grade
   * Top 3 students on the leaderboard can get 10 bonus points for project 3.
   
@@ -92,16 +81,35 @@ Please compress all the below files into a zipped file and submit the zip file (
 * **Python Code**
   * All the code you implemented including sample codes.
 
+### Required files for the autograder
+
+The autograder only reads a subset of your submission -- it does not read
+`report.pdf` (that's graded separately by the TA, so you won't see report
+feedback in Gradescope). It looks for, by filename, anywhere in your
+submitted zip:
+* `agent_dqn.py` and `dqn_model.py` -- **required**; if either is missing,
+  both the Trained Model and Python Code scores are 0
+* `argument.py` -- optional, only used if you added custom arguments
+* your trained model `.pth` file(s) -- **required**; missing this also
+  scores 0 on the automated portion
+
 ## Grading
-* **Trained Model (50 points)**
+Submitting to Canvas/Gradescope automatically runs `python main.py --test_dqn`
+against your code and checkpoint (100 episodes, 5 lives each) and scores the
+**Trained Model** and **Python Code** components immediately -- the same
+command you'd run yourself, so what you see locally is what you get. The
+**PDF Report** and the leaderboard **Bonus** are graded separately by the TA
+after the deadline (not by the autograder).
+
+* **Trained Model (50 points, automatic)**
   * Getting averaging reward in 100 episodes over **40 points** (with 5 lives) in Breakout will get full credits. 
   * For every average reward below 40, you will be taken off 2 points. i.e., you will be taken off 2 points, if getting averaging reward in 100 episodes is 39 and taken off 4 points, if averaging reward is 38, so on so forth.
 
-* **PDF Report (30 points)**
+* **PDF Report (30 points, manual/TA-graded)**
   * Set of parameters performed: 20 points
   * Visualization: 10 points
   
-* **Python Code (20 points)**
+* **Python Code (20 points, automatic)**
   * You can get full credits if the scripts can run successfully, otherwise you may loss some points based on your error.
 
 ## Hints
