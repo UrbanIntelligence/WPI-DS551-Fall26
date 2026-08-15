@@ -90,6 +90,7 @@ include **all** of:
 - [ ] `dqn_model.py`
 - [ ] `argument.py` -- only if you added custom arguments
 - [ ] your trained model `.pth` file(s)
+- [ ] your PDF report
 
 The autograder only reads a subset of your submission -- it does not read
 `report.pdf` (that's graded separately by the TA, so you won't see report
