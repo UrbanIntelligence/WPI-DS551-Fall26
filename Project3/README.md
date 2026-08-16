@@ -60,10 +60,12 @@ In this project, you will be asked to implement DQN to play [Breakout](https://g
 
 ## Deliverables
 
-Please the following files to Canvas"
+Please submit the following files to Canvas:
 
 * **Trained Model** (Will be autograded by Canvas GradeScope)
-  * Model file (.pth). The file name doesn't matter.
+  * Model file (.pth). The autograder doesn't require any specific
+    filename, but it must match whatever filename your own `agent_dqn.py`
+    is coded to load (see "Submission checklist" below).
   * If your model is too large for Canvas, upload it to a cloud space and provide the download link 
 
 * **PDF Report** (To be graded by TA)
@@ -83,11 +85,11 @@ Please the following files to Canvas"
 * **Python Code** (Will be autograded by Canvas GradeScope)
   * All the code you implemented, including agent_dqn.py, dqn_model.py, and optionally argument.py (if updated)
 
-### Required files for the autograder
+### Submission checklist
 
 **⚠️ Submitting only your `.pth` file is the #1 mistake and scores an
-immediate 0/70.** Your submission (directly, or zipped -- both work) must
-include **all** of:
+immediate 0/70 on the autograded portion.** Your submission (directly, or
+zipped -- both work) must include **all** of:
 - [ ] `agent_dqn.py`
 - [ ] `dqn_model.py`
 - [ ] `argument.py` -- only if you added custom arguments
