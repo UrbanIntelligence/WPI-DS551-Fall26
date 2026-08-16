@@ -94,10 +94,10 @@ include **all** of:
 - [ ] your trained model `.pth` file(s)
 - [ ] your PDF report
 
-The autograder only reads a subset of your submission -- it does not read
-`report.pdf` (that's graded separately by the TA, so you won't see report
-feedback in Gradescope). It looks for, by filename, anywhere in your
-submitted zip:
+The autograder reads only a subset of your submission. It does not read report.pdf, which is graded separately by the TA; therefore, you will not see feedback on the report in Gradescope.
+
+For the files processed by the autograder, it looks for the required files by filename, regardless of where they are located within your submission. You may submit either a list of individual files or a compressed ZIP file containing all the required files.
+
 * `agent_dqn.py` and `dqn_model.py` -- **required**; if either is missing,
   Gradescope reports "MISSING required file" and both the Trained Model
   and Python Code scores are 0 -- this is exactly what happens if you
