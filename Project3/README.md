@@ -23,7 +23,8 @@ In this project, we will provide a leaderboard and give **10** bonus points to t
 
   
 * How to evaluate
-  * You should submit your latest trained model and python code. When you submit to Canvas/Gradescope, the autograder automatically runs your code (`python main.py --test_dqn`) and computes your Trained Model and Python Code scores right away -- make sure the result is consistent with the screenshot in your report.
+  * You should submit your latest trained model (.pth file) and python code (agent_dqn.py, dqn_model.py, and optionally argument.py (if updated)). When you submit to Canvas/Gradescope, the autograder automatically runs your code (`python main.py --test_dqn`) and computes your Trained Model and Python Code scores right away -- make sure the result is consistent with the screenshot in your report. 
+  
 * How to grade
   * Top 3 students on the leaderboard can get 10 bonus points for project 3.
   
@@ -58,13 +59,14 @@ In this project, you will be asked to implement DQN to play [Breakout](https://g
 <img src="/Project3/materials/project3.png" width="80%" >
 
 ## Deliverables
-Please compress all the below files into a zipped file and submit the zip file (firstName_lastName_hw3.zip) to Canvas.
 
-* **Trained Model**
-  * Model file (.pth)
+Please the following files to Canvas"
+
+* **Trained Model** (Will be autograded by Canvas GradeScope)
+  * Model file (.pth). The file name doesn't matter.
   * If your model is too large for Canvas, upload it to a cloud space and provide the download link 
 
-* **PDF Report**
+* **PDF Report** (To be graded by TA)
   * screenshot of the test results
   * Set of Experiments Performed: 
     * Include a section describing the set of experiments that you performed
@@ -78,8 +80,8 @@ Please compress all the below files into a zipped file and submit the zip file (
     
     <img src="/Project3/materials/plot.png" width="60%" >
 
-* **Python Code**
-  * All the code you implemented including sample codes.
+* **Python Code** (Will be autograded by Canvas GradeScope)
+  * All the code you implemented, including agent_dqn.py, dqn_model.py, and optionally argument.py (if updated)
 
 ### Required files for the autograder
 
