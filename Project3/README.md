@@ -66,7 +66,7 @@ Please submit the following files to Canvas:
   * Model file (.pth). The autograder doesn't require any specific
     filename, but it must match whatever filename your own `agent_dqn.py`
     is coded to load (see "Submission checklist" below).
-  * If your model is too large for Canvas, upload it to a cloud space and provide the download link 
+
 
 * **PDF Report** (To be graded by TA)
   * screenshot of the test results
