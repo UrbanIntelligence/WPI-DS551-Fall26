@@ -141,7 +141,7 @@ after the deadline (not by the autograder).
 * [DQN Tutorial on Medium](https://medium.com/@jonathan_hui/rl-dqn-deep-q-network-e207751f7ae4)
 
 ## Tips for Using Turing GPUs or Google Cloud
-* [How to use GPUs on WPI Turing](https://github.com/UrbanIntelligence/WPI-DS551-Fall26/blob/main/Project3/materials/Turing_Setup_Instructions_2025.pdf)
+* [How to use GPUs on WPI Turing](https://github.com/UrbanIntelligence/WPI-DS551-Fall26/blob/main/Project3/materials/Turing_Setup_Instructions_2026.pdf)
 * [Google Cloud Platform](https://colab.google/)
 
   
