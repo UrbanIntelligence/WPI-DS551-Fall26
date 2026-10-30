@@ -144,6 +144,19 @@ after the deadline (not by the autograder).
 * [How to use GPUs on WPI Turing](https://github.com/UrbanIntelligence/WPI-DS551-Fall26/blob/main/Project3/materials/Turing_Setup_Instructions_2026.pdf)
 * [Google Cloud Platform](https://colab.google/)
 
+## Leaderboard for Fall 2026** 
+  
+  | Top | Date | Name | Score |
+  | :---: | :---:| :---: | :---: |
+  | **1**   |10/29/2026| **Ishaan Patel**          |  **360.07**    | 
+  | **2**   |10/29/2026| **Owen RadCliffe**         |   **323.4**    |
+  | **3**  |10/29/2026| **minafahmy**| **274.52** |
+  | 4   |10/29/2026| Dan Do | 267.86    | 
+  | 5   |10/29/2026| Sri Satya Satwik Sirigineedi|  213.74   | 
+  | 6   |10/29/2026| Chad | 165 | 
+  | 7   ||  |  | 
+  | 8   | |   |     | 
+  | 9   | |             |        |
   
 ## Leaderboard for Fall 2019** 
   
